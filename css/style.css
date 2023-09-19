@@ -20,7 +20,7 @@ body {
 .titulo {
   color: #ffffff;
   font-size: 100px;
-  font-family: "Righteous";
+  font-family: "Righteous", "Roboto";
   margin-left: 5%;
   margin-top: 30px;
   position: fixed;
@@ -29,7 +29,7 @@ body {
 .subtitulo {
   color: #ffffff;
   font-size: 40px;
-  font-family: "Roboto";
+  font-family: "Roboto", "Righteous";
   margin-left: 5%;
   margin-top: 13%;
   position: fixed;
@@ -37,7 +37,7 @@ body {
 
 .categorias {
   color: black;
-  font-family: "Righteous";
+  font-family: "Righteous", "Roboto";
   font-size: 60px;
   margin-left: 5%;
   margin-top: 2vh;
@@ -50,7 +50,7 @@ body {
   border-radius: 20px;
   margin-top: 2vh;
   width: 50vw;
-  height: 21vh;
+  height: 22vh;
 }
 
 .img1 {
@@ -60,7 +60,7 @@ body {
 }
 
 .nome-prato {
-  font-family: "Roboto";
+  font-family: "Roboto", "Righteous";
   font-size: 34px;
   font-weight: bold;
   margin-left: 33px;
@@ -68,7 +68,7 @@ body {
 }
 
 .texto-prato {
-  font-family: "Roboto";
+  font-family: "Roboto", "Righteous";
   color: #a6a6a6;
   font-size: 28px;
   font-weight: 300;
@@ -78,7 +78,7 @@ body {
 }
 
 .valor-prato {
-  font-family: "Roboto";
+  font-family: "Roboto", "Righteous";
   margin-top: 1.5vh;
   font-size: 34px;
   font-weight: 500;
@@ -95,7 +95,7 @@ body {
 .menu-prato {
   display: flex;
   overflow-x: scroll;
-  height: 25vh;
+  height: 26vh;
 }
 
 .rodape {
@@ -122,7 +122,7 @@ body {
 .pedido {
   font-size: 44px;
   color: #ffffff;
-  font-family: "Roboto";
+  font-family: "Roboto", "Righteous";
   width: 60%;
   text-align: center;
   margin-top: 1vh;
