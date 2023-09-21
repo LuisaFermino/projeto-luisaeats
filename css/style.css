@@ -51,6 +51,7 @@ body {
   background-color: white;
   box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.179);
   margin-left: 5%;
+  border: 5px solid white;
   border-radius: 20px;
   margin-top: 2vh;
   width: 50vw;
