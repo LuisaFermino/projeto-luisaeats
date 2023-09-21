@@ -2,7 +2,11 @@ body {
   background-color: #eeeeee;
 }
 .container-body {
-  height: 100vh;
+  height: 95vh;
+}
+
+* {
+  box-sizing: border-box;
 }
 .topo {
   background-color: #cf2b2b;
@@ -30,6 +34,7 @@ body {
   color: #ffffff;
   font-size: 40px;
   font-family: "Roboto", "Righteous";
+  font-weight: 400;
   margin-left: 5%;
   margin-top: 13%;
   position: fixed;
@@ -40,7 +45,6 @@ body {
   font-family: "Righteous", "Roboto";
   font-size: 60px;
   margin-left: 5%;
-  margin-top: 2vh;
 }
 
 .caixa {
@@ -50,12 +54,12 @@ body {
   border-radius: 20px;
   margin-top: 2vh;
   width: 50vw;
-  height: 22vh;
+  height: 20vh;
 }
 
 .img1 {
   width: 30vw;
-  height: 9vh;
+  height: 8vh;
   border-radius: 10px;
 }
 
@@ -64,7 +68,7 @@ body {
   font-size: 34px;
   font-weight: bold;
   margin-left: 33px;
-  margin-top: 1vh;
+  padding-top: 1vh;
 }
 
 .texto-prato {
@@ -73,29 +77,38 @@ body {
   font-size: 28px;
   font-weight: 300;
   width: 80%;
-  margin-top: 1vh;
+  padding-top: 1vh;
   margin-left: 33px;
 }
 
 .valor-prato {
   font-family: "Roboto", "Righteous";
-  margin-top: 1.5vh;
+  padding: 9%;
   font-size: 34px;
   font-weight: 500;
-  margin-left: 33px;
+}
+
+.valor {
+  font-family: "Roboto", "Righteous";
+  font-size: 34px;
+  font-weight: 500;
+  margin-top: 1vh;
+  margin-left: 3vw;
 }
 
 .foto {
   justify-content: center;
   display: flex;
-  margin-top: 2vh;
+  padding-top: 2vh;
   width: 36vw;
 }
 
-.menu-prato {
+.menu-prato,
+.menu-bebida,
+.menu-sobremesa {
   display: flex;
   overflow-x: scroll;
-  height: 26vh;
+  height: 25vh;
 }
 
 .rodape {
@@ -126,4 +139,13 @@ body {
   width: 60%;
   text-align: center;
   margin-top: 1vh;
+}
+
+.selecionado {
+  border: 5px solid #32b72f;
+  border-radius: 20px;
+  margin-left: 5%;
+  margin-top: 2vh;
+  width: 55vw;
+  height: 20vh;
 }
