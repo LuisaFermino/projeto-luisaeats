@@ -51,10 +51,10 @@ body {
   background-color: white;
   box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.179);
   margin-left: 5%;
-  border: 5px solid white;
+  border: 8px solid white;
   border-radius: 20px;
   margin-top: 2vh;
-  width: 50vw;
+  width: 40vw;
   height: 20vh;
 }
 
@@ -75,7 +75,7 @@ body {
 .texto-prato {
   font-family: "Roboto", "Righteous";
   color: #a6a6a6;
-  font-size: 28px;
+  font-size: 29px;
   font-weight: 300;
   width: 80%;
   padding-top: 1vh;
@@ -100,8 +100,8 @@ body {
 .foto {
   justify-content: center;
   display: flex;
-  padding-top: 2vh;
-  width: 36vw;
+  padding-top: 1vh;
+  width: 35vw;
 }
 
 .menu-prato,
@@ -112,41 +112,56 @@ body {
   height: 25vh;
 }
 
-.rodape {
+.rodape,
+.rodape-final {
   background-color: #ffffff;
-  height: 10vh;
+  height: 11vh;
   width: 100%;
   display: flex;
   justify-content: center;
   position: fixed;
   bottom: 0;
   left: 0;
+  align-items: center;
 }
 
 .container {
   width: 78vw;
   height: 6vh;
   background-color: #cbcbcb;
-  margin-top: 2vh;
   border-radius: 60px;
   justify-content: center;
   display: flex;
+  align-items: center;
 }
 
-.pedido {
+.mensagem-pedido,
+.mensagem-final {
   font-size: 44px;
   color: #ffffff;
   font-family: "Roboto", "Righteous";
   width: 60%;
   text-align: center;
-  margin-top: 1vh;
 }
 
 .selecionado {
-  border: 5px solid #32b72f;
+  border: 8px solid #32b72f;
   border-radius: 20px;
   margin-left: 5%;
   margin-top: 2vh;
-  width: 55vw;
+  width: 40vw;
   height: 20vh;
+}
+
+.container-pedido {
+  width: 78vw;
+  height: 6vh;
+  background-color: #32b72f;
+  border-radius: 60px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.escondido {
+  display: none;
 }
