@@ -125,7 +125,8 @@ body {
   align-items: center;
 }
 
-.container {
+.container,
+button {
   width: 78vw;
   height: 6vh;
   background-color: #cbcbcb;
@@ -133,6 +134,7 @@ body {
   justify-content: center;
   display: flex;
   align-items: center;
+  border: 1px #cbcbcb;
 }
 
 .mensagem-pedido,
