@@ -52,3 +52,9 @@ function validarPedido() {
     mensagemFinalizar.innerHTML = "Fechar Pedido";
   }
 }
+
+function fecharPedido() {
+  if (prato !== null && bebida !== null && sobremesa !== null) {
+    window.location.href = "https://wa.me/5514998812492";
+  }
+}
