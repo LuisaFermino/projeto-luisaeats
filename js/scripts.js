@@ -56,6 +56,6 @@ function validarPedido() {
 function fecharPedido() {
   if (prato !== null && bebida !== null && sobremesa !== null) {
     window.location.href =
-      "https://wa.me/5514998812492?text=Olá,%20gostaria%20de%20fazer%20o%20pedido";
+      "https://wa.me/5514998812492?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20o%20pedido%3A%20%0A%0A%20%20-%20Prato%3A%20Frango%20Yin%20Yang%20%0A%0A%20%20-%20Bebida%3A%20Coquinha%20Gelada%20%0A%0A%20%20-%20Sobremesa%3A%20Pudim%20%0A%0A%20%20Total%3A%20R%24%2027.70";
   }
 }
