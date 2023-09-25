@@ -55,6 +55,7 @@ function validarPedido() {
 
 function fecharPedido() {
   if (prato !== null && bebida !== null && sobremesa !== null) {
-    window.location.href = "https://wa.me/5514998812492?text=Teste%20mensagem";
+    window.location.href =
+      "https://wa.me/5514998812492?text=Olá,%20gostaria%20de%20fazer%20o%20pedido";
   }
 }
