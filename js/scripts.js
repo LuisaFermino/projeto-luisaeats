@@ -8,10 +8,10 @@ function selecionarPrato(classePrato) {
   if (selecionado !== null) {
     selecionado.classList.remove("selecionado");
   }
-
-  prato = classePrato;
-  const botao = document.querySelector("." + classePrato);
-  botao.classList.add("selecionado");
+  const pratoSelecionado = document.querySelector("." + classePrato);
+  pratoSelecionado.classList.add("selecionado");
+  prato = pratoSelecionado;
+  validarPedido();
 }
 
 //função para selecionar bebida
@@ -21,9 +21,11 @@ function selecionarBebida(classeBebida) {
     selecionado.classList.remove("selecionado");
   }
 
-  bebida = classeBebida;
-  const botao = document.querySelector("." + classeBebida);
-  botao.classList.add("selecionado");
+  const bebidaSelecionada = document.querySelector("." + classeBebida);
+  bebidaSelecionada.classList.add("selecionado");
+
+  bebida = bebidaSelecionada;
+  validarPedido();
 }
 
 //função para selecionar sobremesa
@@ -34,19 +36,19 @@ function selecionarSobremesa(classeSobremesa) {
     selecionado.classList.remove("selecionado");
   }
 
-  sobremesa = classeSobremesa;
-  const botao = document.querySelector("." + classeSobremesa);
-  botao.classList.add("selecionado");
+  const sobremesaSelecionada = document.querySelector("." + classeSobremesa);
+  sobremesaSelecionada.classList.add("selecionado");
+  sobremesa = sobremesaSelecionada;
+
+  validarPedido();
 }
 
-function finalizarPedido() {
-  let finalizar = document.querySelector(".rodape-final");
+function validarPedido() {
+  if (prato !== null && bebida !== null && sobremesa !== null) {
+    const liberado = document.querySelector(" .container");
+    liberado.classList.add("liberado");
 
-  if (finalizar !== null) {
-    finalizar.classList.remove("escondido");
-  } else if (finalizar === prato + bebida + sobremesa) {
-    finalizar.classList.add("escondido");
+    let mensagemFinalizar = document.querySelector(".mensagem-pedido");
+    mensagemFinalizar.innerHTML = "Fechar Pedido";
   }
-  let mensagem = document.querySelector(".mensagem-pedido");
-  mensagem.innerHTML = "Fechar pedido";
 }

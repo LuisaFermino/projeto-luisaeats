@@ -112,8 +112,7 @@ body {
   height: 25vh;
 }
 
-.rodape,
-.rodape-final {
+.rodape {
   background-color: #ffffff;
   height: 11vh;
   width: 100%;
@@ -125,16 +124,19 @@ body {
   align-items: center;
 }
 
-.container,
-button {
-  width: 78vw;
+.container {
+  width: 70vw;
   height: 6vh;
   background-color: #cbcbcb;
   border-radius: 60px;
   justify-content: center;
   display: flex;
   align-items: center;
-  border: 1px #cbcbcb;
+  border: none;
+}
+
+.liberado {
+  background-color: #32b72f;
 }
 
 .mensagem-pedido,
@@ -142,8 +144,8 @@ button {
   font-size: 44px;
   color: #ffffff;
   font-family: "Roboto", "Righteous";
-  width: 60%;
   text-align: center;
+  width: 70%;
 }
 
 .selecionado {
@@ -155,15 +157,6 @@ button {
   height: 20vh;
 }
 
-.container-pedido {
-  width: 78vw;
-  height: 6vh;
-  background-color: #32b72f;
-  border-radius: 60px;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-}
 .escondido {
   display: none;
 }
