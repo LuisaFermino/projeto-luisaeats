@@ -53,14 +53,13 @@ function validarPedido() {
   }
 }
 
-valorPrato = null;
-valorBebida = null;
-valorSobremesa = null;
-
 function fecharPedido() {
   if (prato !== null && bebida !== null && sobremesa !== null) {
     let nomePrato = prato.querySelector(".nome-prato");
-    let valorPrato = prato.querySelector(".valor");
+    let valorPrato = prato.querySelector(".valor").innerHTML;
+  
+
+    
 
     let nomeBebida = bebida.querySelector(".nome-prato");
     let valorBebida = bebida.querySelector(".valor-prato");
@@ -70,7 +69,39 @@ function fecharPedido() {
 
     //Procurar valor dos elementos para utilizar na conta
 
-    // window.location.href =
-    //   "https://wa.me/5514998812492?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20o%20pedido%3A%20%0A%0A%20%20-%20Prato%3A%20Frango%20Yin%20Yang%20%0A%0A%20%20-%20Bebida%3A%20Coquinha%20Gelada%20%0A%0A%20%20-%20Sobremesa%3A%20Pudim%20%0A%0A%20%20Total%3A%20R%24%2027.70";
+    
+
+    window.location.href =
+    `https://wa.me/5514998812492?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20o%20pedido%3A%20%0A%0A%20%20-%20Prato%3A%20Frango%20Yin%20Yang%20%0A%0A%20%20-%20Bebida%3A%20Coquinha%20Gelada%20%0A%0A%20%20-%20Sobremesa%3A%20Pudim%20%0A%0A%20%20Total%3A%20R%24%2027.70`;
   }
 }
+
+
+// let texto = "A Luisa é a pessoa mais bonita do WORD";
+// undefined
+// texto
+// 'A Luisa é a pessoa mais bonita do WORD'
+// texto = texto.repl
+// undefined
+// texto
+// undefined
+// let texto = "A Luisa é a pessoa mais bonita do WORD";
+// undefined
+// texto = texto.replace("Luisa", "Paulo")
+// 'A Paulo é a pessoa mais bonita do WORD'
+// let teste = "O valor é R$ 14.00"
+// undefined
+// teste = teste.replace("R$14.00", 14.00)
+// 'O valor é R$ 14.00'
+// teste = teste.replace("O valor é R$", "")
+// ' 14.00'
+// teste = teste.replace(" ", "")
+// '14.00'
+// Number(teste)
+// 14
+// teste.toFixed(2)
+
+// teste = Number(teste)
+// 14
+// teste.toFixed(2)
+// '14.00'
