@@ -53,16 +53,20 @@ function validarPedido() {
   }
 }
 
+valorPrato = null;
+valorBebida = null;
+valorSobremesa = null;
+
 function fecharPedido() {
   if (prato !== null && bebida !== null && sobremesa !== null) {
+    let nomePrato = prato.querySelector(".nome-prato");
     let valorPrato = prato.querySelector(".valor");
-    console.log(valorPrato);
 
+    let nomeBebida = bebida.querySelector(".nome-prato");
     let valorBebida = bebida.querySelector(".valor-prato");
-    console.log(valorBebida);
 
+    let nomeSobremesa = sobremesa.querySelector(".nome-prato");
     let valorSobremesa = sobremesa.querySelector(".valor-prato");
-    console.log(valorSobremesa);
 
     //Procurar valor dos elementos para utilizar na conta
 
