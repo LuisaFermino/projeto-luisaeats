@@ -75,9 +75,9 @@ body {
 .texto-prato {
   font-family: "Roboto", "Righteous";
   color: #a6a6a6;
-  font-size: 29px;
+  font-size: 32px;
   font-weight: 300;
-  width: 80%;
+  width: 90%;
   padding-top: 1vh;
   margin-left: 33px;
 }
@@ -85,13 +85,13 @@ body {
 .valor-prato {
   font-family: "Roboto", "Righteous";
   padding: 9%;
-  font-size: 34px;
+  font-size: 37px;
   font-weight: 500;
 }
 
 .valor {
   font-family: "Roboto", "Righteous";
-  font-size: 34px;
+  font-size: 37px;
   font-weight: 500;
   margin-top: 1vh;
   margin-left: 3vw;
