@@ -74,12 +74,13 @@ function fecharPedido() {
     valorSobremesa = Number(valorSobremesa);
 
     let valorTotal = valorPrato + valorBebida + valorSobremesa;
+    let valorAtualizado = valorTotal.toFixed(2);
 
     const mensagemZap = `Olá, gostaria de fazer o pedido: \n
     \n\n- Prato: ${nomePrato} -  ${valorPrato}\n\n
     \n\n- Bebida: ${nomeBebida} -  ${valorBebida}\n\n
     \n\n- Sobremesa: ${nomeSobremesa} -  ${valorSobremesa}\n\n
-    \n\nTotal: ${valorTotal}`;
+    \n\nTotal: ${valorAtualizado}`;
 
     window.location.href = `https://wa.me/5514998812492?text=${mensagemZap}`;
   }
