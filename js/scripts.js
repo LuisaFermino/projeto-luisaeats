@@ -76,10 +76,10 @@ function fecharPedido() {
     let valorTotal = valorPrato + valorBebida + valorSobremesa;
     console.log(valorTotal);
 
-    const mensagemZap = `Olá, gostaria de fazer o pedido: \n 
-    - Prato: ${valorPrato}\n
-    - Bebida: ${valorBebida}\n
-    - Sobremesa: ${valorSobremesa}
+    const mensagemZap = `Olá, gostaria de fazer o pedido: \n\n
+    - Prato: ${nomePrato} - ${valorPrato}\n\n
+    - Bebida: ${nomeBebida} - ${valorBebida}\n\n
+    - Sobremesa: ${nomeSobremesa} - ${valorSobremesa}\n\n
     Total: ${valorTotal}`;
 
     window.location.href = `https://wa.me/5514998812492?text=${mensagemZap}`;
