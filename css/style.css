@@ -124,7 +124,7 @@ body {
   align-items: center;
 }
 
-.container {
+.container-rodape {
   width: 70vw;
   height: 6vh;
   background-color: #cbcbcb;
@@ -163,4 +163,25 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.tela-confirmar {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.852);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-final {
+  background-color: #50d074;
+  width: 90vw;
+  height: 40vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }

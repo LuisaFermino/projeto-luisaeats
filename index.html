@@ -145,11 +145,20 @@
             <p class="valor-prato">R$ 6,00</p>
           </div>
           <div class="rodape">
-            <button class="container">
-              <a class="mensagem-pedido" onclick="fecharPedido()">
+            <button class="container-rodape">
+              <a class="mensagem-pedido" onclick="confirmarPedido()">
                 Selecione os 3 itens para fechar o pedido
               </a>
             </button>
+          </div>
+          <div class="tela-confirmar">
+            <div class="container-final">
+              <p class="informacoes-pedido">Informações</p>
+              <button class="confirma">Tudo certo! Pode pedir!</button>
+              <button class="cancela" onclick="cancelarPedido()">
+                Cancelar
+              </button>
+            </div>
           </div>
         </div>
       </div>

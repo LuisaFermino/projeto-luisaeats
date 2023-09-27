@@ -45,7 +45,7 @@ function selecionarSobremesa(classeSobremesa) {
 
 function validarPedido() {
   if (prato !== null && bebida !== null && sobremesa !== null) {
-    const liberado = document.querySelector(" .container");
+    const liberado = document.querySelector(" .container-rodape");
     liberado.classList.add("liberado");
 
     let mensagemFinalizar = document.querySelector(".mensagem-pedido");
@@ -53,7 +53,7 @@ function validarPedido() {
   }
 }
 
-function fecharPedido() {
+function confirmarPedido() {
   if (prato !== null && bebida !== null && sobremesa !== null) {
     const nomePrato = prato.querySelector(".nome-prato").innerHTML;
     let valorPrato = prato.querySelector(".valor").innerHTML;
@@ -87,8 +87,8 @@ function fecharPedido() {
     \n- Bebida: ${nomeBebida}  R$ ${valorBatualizado}
     \n- Sobremesa: ${nomeSobremesa}  R$ ${valorSatualizado}
     \nTotal: R$ ${valorAtualizado}
-    \n\n Nome: ${nomeCliente}
-    \n Endereço: ${enderecoCliente}`);
+    \nNome: ${nomeCliente}
+    \nEndereço: ${enderecoCliente}`);
 
     window.location.href = `https://wa.me/5514998812492?text=${mensagemZap}`;
   }
