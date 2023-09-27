@@ -60,57 +60,33 @@ function fecharPedido() {
     valorPrato = valorPrato.replace("R$ ", "");
     valorPrato = valorPrato.replace(",", ".");
     valorPrato = Number(valorPrato);
+    let valorPatualizado = valorPrato.toFixed(2);
 
     let nomeBebida = bebida.querySelector(".nome-prato").innerHTML;
     let valorBebida = bebida.querySelector(".valor-prato").innerHTML;
     valorBebida = valorBebida.replace("R$ ", "");
     valorBebida = valorBebida.replace(",", ".");
     valorBebida = Number(valorBebida);
+    let valorBatualizado = valorBebida.toFixed(2);
 
     let nomeSobremesa = sobremesa.querySelector(".nome-prato").innerHTML;
     let valorSobremesa = sobremesa.querySelector(".valor-prato").innerHTML;
     valorSobremesa = valorSobremesa.replace("R$ ", "");
     valorSobremesa = valorSobremesa.replace(",", ".");
     valorSobremesa = Number(valorSobremesa);
+    let valorSatualizado = valorSobremesa.toFixed(2);
 
     let valorTotal = valorPrato + valorBebida + valorSobremesa;
     let valorAtualizado = valorTotal.toFixed(2);
 
-    const mensagemZap = `Olá, gostaria de fazer o pedido: \n
-    \n\n- Prato: ${nomePrato} -  ${valorPrato}\n\n
-    \n\n- Bebida: ${nomeBebida} -  ${valorBebida}\n\n
-    \n\n- Sobremesa: ${nomeSobremesa} -  ${valorSobremesa}\n\n
-    \n\nTotal: ${valorAtualizado}`;
+    const mensagemZap = encodeURI(`Olá, gostaria de fazer o pedido: 
+    \n- Prato: ${nomePrato} -  ${valorPrato}
+    \n- Bebida: ${nomeBebida} -  ${valorBebida}
+    \n- Sobremesa: ${nomeSobremesa} -  ${valorSobremesa}
+    \nTotal: ${valorAtualizado}`);
+
+    console.log(mensagemZap);
 
     window.location.href = `https://wa.me/5514998812492?text=${mensagemZap}`;
   }
 }
-
-// let texto = "A Luisa é a pessoa mais bonita do WORD";
-// undefined
-// texto
-// 'A Luisa é a pessoa mais bonita do WORD'
-// texto = texto.repl
-// undefined
-// texto
-// undefined
-// let texto = "A Luisa é a pessoa mais bonita do WORD";
-// undefined
-// texto = texto.replace("Luisa", "Paulo")
-// 'A Paulo é a pessoa mais bonita do WORD'
-// let teste = "O valor é R$ 14.00"
-// undefined
-// teste = teste.replace("R$14.00", 14.00)
-// 'O valor é R$ 14.00'
-// teste = teste.replace("O valor é R$", "")
-// ' 14.00'
-// teste = teste.replace(" ", "")
-// '14.00'
-// Number(teste)
-// 14
-// teste.toFixed(2)
-
-// teste = Number(teste)
-// 14
-// teste.toFixed(2)
-// '14.00'
