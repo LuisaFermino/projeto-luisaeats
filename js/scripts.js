@@ -53,6 +53,11 @@ function validarPedido() {
   }
 }
 
+function fecharPedido() {
+  const fecharPedido = document.querySelector(".tela-confirmar");
+  fecharPedido.classList.add("abrir");
+}
+
 function confirmarPedido() {
   if (prato !== null && bebida !== null && sobremesa !== null) {
     const nomePrato = prato.querySelector(".nome-prato").innerHTML;
