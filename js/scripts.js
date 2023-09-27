@@ -55,21 +55,21 @@ function validarPedido() {
 
 function fecharPedido() {
   if (prato !== null && bebida !== null && sobremesa !== null) {
-    let nomePrato = prato.querySelector(".nome-prato").innerHTML;
+    const nomePrato = prato.querySelector(".nome-prato").innerHTML;
     let valorPrato = prato.querySelector(".valor").innerHTML;
     valorPrato = valorPrato.replace("R$ ", "");
     valorPrato = valorPrato.replace(",", ".");
     valorPrato = Number(valorPrato);
     let valorPatualizado = valorPrato.toFixed(2);
 
-    let nomeBebida = bebida.querySelector(".nome-prato").innerHTML;
+    const nomeBebida = bebida.querySelector(".nome-prato").innerHTML;
     let valorBebida = bebida.querySelector(".valor-prato").innerHTML;
     valorBebida = valorBebida.replace("R$ ", "");
     valorBebida = valorBebida.replace(",", ".");
     valorBebida = Number(valorBebida);
     let valorBatualizado = valorBebida.toFixed(2);
 
-    let nomeSobremesa = sobremesa.querySelector(".nome-prato").innerHTML;
+    const nomeSobremesa = sobremesa.querySelector(".nome-prato").innerHTML;
     let valorSobremesa = sobremesa.querySelector(".valor-prato").innerHTML;
     valorSobremesa = valorSobremesa.replace("R$ ", "");
     valorSobremesa = valorSobremesa.replace(",", ".");
@@ -79,13 +79,17 @@ function fecharPedido() {
     let valorTotal = valorPrato + valorBebida + valorSobremesa;
     let valorAtualizado = valorTotal.toFixed(2);
 
-    // console.log(mensagemZap);
+    const nomeCliente = prompt("Informe seu Nome: ");
+    const enderecoCliente = prompt("Informe seu Endereço: ");
 
     const mensagemZap = encodeURI(`Olá, gostaria de fazer o pedido:
-    \n- Prato: ${nomePrato} R$${valorPatualizado}
-    \n- Bebida: ${nomeBebida} R$${valorBatualizado}
-    \n- Sobremesa: ${nomeSobremesa} R$${valorSatualizado}
-    \n<b>Total: R$${valorAtualizado}<b>`);
+    \n- Prato: ${nomePrato}  R$ ${valorPatualizado}
+    \n- Bebida: ${nomeBebida}  R$ ${valorBatualizado}
+    \n- Sobremesa: ${nomeSobremesa}  R$ ${valorSatualizado}
+    \nTotal: R$ ${valorAtualizado}
+    \n\n Nome: ${nomeCliente}
+    \n Endereço: ${enderecoCliente}`);
+
     window.location.href = `https://wa.me/5514998812492?text=${mensagemZap}`;
   }
 }
