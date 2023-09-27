@@ -57,25 +57,34 @@ function fecharPedido() {
   if (prato !== null && bebida !== null && sobremesa !== null) {
     let nomePrato = prato.querySelector(".nome-prato");
     let valorPrato = prato.querySelector(".valor").innerHTML;
-  
-
-    
+    valorPrato = valorPrato.replace("R$ ", "");
+    valorPrato = valorPrato.replace(",", ".");
+    valorPrato = Number(valorPrato);
 
     let nomeBebida = bebida.querySelector(".nome-prato");
-    let valorBebida = bebida.querySelector(".valor-prato");
+    let valorBebida = bebida.querySelector(".valor-prato").innerHTML;
+    valorBebida = valorBebida.replace("R$ ", "");
+    valorBebida = valorBebida.replace(",", ".");
+    valorBebida = Number(valorBebida);
 
     let nomeSobremesa = sobremesa.querySelector(".nome-prato");
-    let valorSobremesa = sobremesa.querySelector(".valor-prato");
+    let valorSobremesa = sobremesa.querySelector(".valor-prato").innerHTML;
+    valorSobremesa = valorSobremesa.replace("R$ ", "");
+    valorSobremesa = valorSobremesa.replace(",", ".");
+    valorSobremesa = Number(valorSobremesa);
 
-    //Procurar valor dos elementos para utilizar na conta
+    let valorTotal = valorPrato + valorBebida + valorSobremesa;
+    console.log(valorTotal);
 
-    
+    const mensagemZap = `Olá, gostaria de fazer o pedido: \n 
+    - Prato: ${valorPrato}\n
+    - Bebida: ${valorBebida}\n
+    - Sobremesa: ${valorSobremesa}
+    Total: ${valorTotal}`;
 
-    window.location.href =
-    `https://wa.me/5514998812492?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20o%20pedido%3A%20%0A%0A%20%20-%20Prato%3A%20Frango%20Yin%20Yang%20%0A%0A%20%20-%20Bebida%3A%20Coquinha%20Gelada%20%0A%0A%20%20-%20Sobremesa%3A%20Pudim%20%0A%0A%20%20Total%3A%20R%24%2027.70`;
+    window.location.href = `https://wa.me/5514998812492?text=${mensagemZap}`;
   }
 }
-
 
 // let texto = "A Luisa é a pessoa mais bonita do WORD";
 // undefined
