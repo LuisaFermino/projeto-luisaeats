@@ -80,13 +80,13 @@ function fecharPedido() {
     let valorAtualizado = valorTotal.toFixed(2);
 
     const mensagemZap = encodeURI(`Olá, gostaria de fazer o pedido: 
-    \n- Prato: ${nomePrato} -  ${valorPrato}
-    \n- Bebida: ${nomeBebida} -  ${valorBebida}
-    \n- Sobremesa: ${nomeSobremesa} -  ${valorSobremesa}
+    \n- Prato: ${nomePrato} -  ${valorPatualizado}
+    \n- Bebida: ${nomeBebida} -  ${valorBatualizado}
+    \n- Sobremesa: ${nomeSobremesa} -  ${valorSatualizado}
     \nTotal: ${valorAtualizado}`);
 
     console.log(mensagemZap);
 
-    window.location.href = `https://wa.me/5514998812492?text=${mensagemZap}`;
+    // window.location.href = `https://wa.me/5514998812492?text=${mensagemZap}`;
   }
 }
