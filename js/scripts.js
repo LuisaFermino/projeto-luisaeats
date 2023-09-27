@@ -55,32 +55,31 @@ function validarPedido() {
 
 function fecharPedido() {
   if (prato !== null && bebida !== null && sobremesa !== null) {
-    let nomePrato = prato.querySelector(".nome-prato");
+    let nomePrato = prato.querySelector(".nome-prato").innerHTML;
     let valorPrato = prato.querySelector(".valor").innerHTML;
     valorPrato = valorPrato.replace("R$ ", "");
     valorPrato = valorPrato.replace(",", ".");
     valorPrato = Number(valorPrato);
 
-    let nomeBebida = bebida.querySelector(".nome-prato");
+    let nomeBebida = bebida.querySelector(".nome-prato").innerHTML;
     let valorBebida = bebida.querySelector(".valor-prato").innerHTML;
     valorBebida = valorBebida.replace("R$ ", "");
     valorBebida = valorBebida.replace(",", ".");
     valorBebida = Number(valorBebida);
 
-    let nomeSobremesa = sobremesa.querySelector(".nome-prato");
+    let nomeSobremesa = sobremesa.querySelector(".nome-prato").innerHTML;
     let valorSobremesa = sobremesa.querySelector(".valor-prato").innerHTML;
     valorSobremesa = valorSobremesa.replace("R$ ", "");
     valorSobremesa = valorSobremesa.replace(",", ".");
     valorSobremesa = Number(valorSobremesa);
 
     let valorTotal = valorPrato + valorBebida + valorSobremesa;
-    console.log(valorTotal);
 
-    const mensagemZap = `Olá, gostaria de fazer o pedido: \n\n
-    - Prato: ${nomePrato} - ${valorPrato}\n\n
-    - Bebida: ${nomeBebida} - ${valorBebida}\n\n
-    - Sobremesa: ${nomeSobremesa} - ${valorSobremesa}\n\n
-    Total: ${valorTotal}`;
+    const mensagemZap = `Olá, gostaria de fazer o pedido: 
+    \n- Prato: ${nomePrato} - ${valorPrato}\n
+    \n- Bebida: ${nomeBebida} - ${valorBebida}\n
+    \n- Sobremesa: ${nomeSobremesa} - ${valorSobremesa}\n
+    \nTotal: ${valorTotal}`;
 
     window.location.href = `https://wa.me/5514998812492?text=${mensagemZap}`;
   }
