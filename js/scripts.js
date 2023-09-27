@@ -85,8 +85,8 @@ function fecharPedido() {
     \n- Sobremesa: ${nomeSobremesa} -  ${valorSatualizado}
     \nTotal: ${valorAtualizado}`);
 
-    console.log(mensagemZap);
+    // console.log(mensagemZap);
 
-    // window.location.href = `https://wa.me/5514998812492?text=${mensagemZap}`;
+    window.location.href = `https://wa.me/5514998812492?text=${mensagemZap}`;
   }
 }
