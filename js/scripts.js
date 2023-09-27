@@ -43,6 +43,7 @@ function selecionarSobremesa(classeSobremesa) {
   validarPedido();
 }
 
+//Funçao para validar o pedido
 function validarPedido() {
   if (prato !== null && bebida !== null && sobremesa !== null) {
     const liberado = document.querySelector(" .container-rodape");
@@ -53,9 +54,25 @@ function validarPedido() {
   }
 }
 
+//Função que mostra a aba de confirmação
 function fecharPedido() {
   const fecharPedido = document.querySelector(".tela-confirmar");
   fecharPedido.classList.add("abrir");
+
+  const nomePrato = prato.querySelector(".nome-prato").innerHTML;
+  let valorPrato = prato.querySelector(".valor").innerHTML;
+  let mensagemPrato = document.querySelector(".descricao-prato");
+  mensagemPrato.innerHTML = `${nomePrato} &nbsp;&nbsp;&nbsp;&nbsp; ${valorPrato}`;
+
+  const nomeBebida = bebida.querySelector(".nome-prato").innerHTML;
+  let valorBebida = bebida.querySelector(".valor-prato").innerHTML;
+  let mensagemBebida = document.querySelector(".descricao-bebida");
+  mensagemBebida.innerHTML = `${nomeBebida} &nbsp;&nbsp;&nbsp;&nbsp; ${valorBebida}`;
+
+  const nomeSobremesa = sobremesa.querySelector(".nome-prato").innerHTML;
+  let valorSobremesa = sobremesa.querySelector(".valor-prato").innerHTML;
+  let mensagemSobremesa = document.querySelector(".descricao-sobremesa");
+  mensagemSobremesa.innerHTML = `${nomeSobremesa} &nbsp;&nbsp;&nbsp;&nbsp; ${valorSobremesa}`;
 
   fecharPedido.addEventListener("click", (e) => {
     if (e.target.id == "cancelar") {
@@ -64,6 +81,7 @@ function fecharPedido() {
   });
 }
 
+//função que envia a confirmação para o whats
 function confirmarPedido() {
   if (prato !== null && bebida !== null && sobremesa !== null) {
     const nomePrato = prato.querySelector(".nome-prato").innerHTML;

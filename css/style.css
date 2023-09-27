@@ -243,13 +243,16 @@ a {
   font-family: "Roboto", "Righteous";
 }
 
-.descricao-pedido {
+.descricao-prato,
+.descricao-bebida,
+.descricao-sobremesa,
+.descricao-total {
   font-family: "Roboto", "Righteous";
   color: white;
-  font-size: 45px;
+  font-size: 48px;
   padding-left: 5vw;
   padding-top: 2vh;
 }
 .descricao {
-  padding: 2%;
+  padding: 1%;
 }
