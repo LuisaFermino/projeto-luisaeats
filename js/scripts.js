@@ -62,17 +62,34 @@ function fecharPedido() {
   const nomePrato = prato.querySelector(".nome-prato").innerHTML;
   let valorPrato = prato.querySelector(".valor").innerHTML;
   let mensagemPrato = document.querySelector(".descricao-prato");
-  mensagemPrato.innerHTML = `${nomePrato} &nbsp;&nbsp;&nbsp;&nbsp; ${valorPrato}`;
+  valorPrato = valorPrato.replace("R$ ", "");
+  valorPrato = valorPrato.replace(",", ".");
+  valorPrato = Number(valorPrato);
+  let valorPatualizado = valorPrato.toFixed(2);
+  mensagemPrato.innerHTML = `${nomePrato} &nbsp;&nbsp;&nbsp;&nbsp; ${valorPatualizado}`;
 
   const nomeBebida = bebida.querySelector(".nome-prato").innerHTML;
   let valorBebida = bebida.querySelector(".valor-prato").innerHTML;
   let mensagemBebida = document.querySelector(".descricao-bebida");
-  mensagemBebida.innerHTML = `${nomeBebida} &nbsp;&nbsp;&nbsp;&nbsp; ${valorBebida}`;
+  valorBebida = valorBebida.replace("R$ ", "");
+  valorBebida = valorBebida.replace(",", ".");
+  valorBebida = Number(valorBebida);
+  let valorBatualizado = valorBebida.toFixed(2);
+  mensagemBebida.innerHTML = `${nomeBebida} &nbsp;&nbsp;&nbsp;&nbsp; ${valorBatualizado}`;
 
   const nomeSobremesa = sobremesa.querySelector(".nome-prato").innerHTML;
   let valorSobremesa = sobremesa.querySelector(".valor-prato").innerHTML;
   let mensagemSobremesa = document.querySelector(".descricao-sobremesa");
-  mensagemSobremesa.innerHTML = `${nomeSobremesa} &nbsp;&nbsp;&nbsp;&nbsp; ${valorSobremesa}`;
+  valorSobremesa = valorSobremesa.replace("R$ ", "");
+  valorSobremesa = valorSobremesa.replace(",", ".");
+  valorSobremesa = Number(valorSobremesa);
+  let valorSatualizado = valorSobremesa.toFixed(2);
+  mensagemSobremesa.innerHTML = `${nomeSobremesa} &nbsp;&nbsp;&nbsp;&nbsp; ${valorSatualizado}`;
+
+  let valorTotal = valorPrato + valorBebida + valorSobremesa;
+  let valorAtualizado = valorTotal.toFixed(2);
+  let mensagemTotal = document.querySelector(".descricao-total");
+  mensagemTotal.innerHTML = `TOTAL: R$ ${valorAtualizado}`;
 
   fecharPedido.addEventListener("click", (e) => {
     if (e.target.id == "cancelar") {
