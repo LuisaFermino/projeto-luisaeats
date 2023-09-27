@@ -56,6 +56,12 @@ function validarPedido() {
 function fecharPedido() {
   const fecharPedido = document.querySelector(".tela-confirmar");
   fecharPedido.classList.add("abrir");
+
+  fecharPedido.addEventListener("click", (e) => {
+    if (e.target.id == "cancelar") {
+      fecharPedido.classList.remove("abrir");
+    }
+  });
 }
 
 function confirmarPedido() {
