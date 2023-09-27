@@ -179,9 +179,73 @@ a {
 
 .container-final {
   background-color: #50d074;
-  width: 90vw;
-  height: 40vh;
+  width: 80vw;
+  height: 35vh;
+  box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.179);
+  border-radius: 20px;
+}
+
+.informacoes-pedido {
+  font-family: "Roboto", "Righteous";
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.confirmar {
+  width: 60vw;
+  height: 5vh;
+  background-color: #ffffff;
+  border-radius: 60px;
+  justify-content: center;
+  display: flex;
   align-items: center;
+  border: none;
+  position: fixed;
+  top: 57vh;
+}
+
+.texto-confirmar {
+  color: #50d074;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Roboto", "Righteous";
+}
+
+.teste {
   display: flex;
   justify-content: center;
+}
+
+.cancelar {
+  width: 20vw;
+  height: 3vh;
+  background-color: #50d074;
+  border-radius: 60px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: none;
+  position: fixed;
+  top: 63vh;
+}
+
+.texto-cancelar {
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Roboto", "Righteous";
+}
+
+.descricao-pedido {
+  font-family: "Roboto", "Righteous";
+  color: white;
+  font-size: 45px;
+  padding-left: 5vw;
+  padding-top: 2vh;
+}
+.descricao {
+  padding: 2%;
 }

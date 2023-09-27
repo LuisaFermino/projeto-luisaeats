@@ -153,11 +153,27 @@
           </div>
           <div class="tela-confirmar">
             <div class="container-final">
-              <p class="informacoes-pedido">Informações</p>
-              <button class="confirma">Tudo certo! Pode pedir!</button>
-              <button class="cancela" onclick="cancelarPedido()">
-                Cancelar
-              </button>
+              <p class="informacoes-pedido">Confirme seu Pedido</p>
+              <div class="descricao">
+                <p class="descricao-pedido">Prato</p>
+                <p class="descricao-pedido">Bebida</p>
+                <p class="descricao-pedido">Sobremesa</p>
+                <p class="descricao-pedido">Total</p>
+              </div>
+              <div class="teste">
+                <button
+                  class="confirmar texto-confirmar"
+                  onclick="confirmarPedido()"
+                >
+                  Tudo certo! Pode pedir!
+                </button>
+                <button
+                  class="cancelar texto-cancelar"
+                  onclick="cancelarPedido()"
+                >
+                  Cancelar
+                </button>
+              </div>
             </div>
           </div>
         </div>
