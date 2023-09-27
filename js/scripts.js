@@ -82,10 +82,10 @@ function fecharPedido() {
     // console.log(mensagemZap);
 
     const mensagemZap = encodeURI(`Olá, gostaria de fazer o pedido:
-    \n- Prato: ${nomePrato} -  ${valorPatualizado}
-    \n- Bebida: ${nomeBebida} -  ${valorBatualizado}
-    \n- Sobremesa: ${nomeSobremesa} -  ${valorSatualizado}
-    \nTotal: ${valorAtualizado}`);
+    \n- Prato: ${nomePrato} R$${valorPatualizado}
+    \n- Bebida: ${nomeBebida} R$${valorBatualizado}
+    \n- Sobremesa: ${nomeSobremesa} R$${valorSatualizado}
+    \n<b>Total: R$${valorAtualizado}<b>`);
     window.location.href = `https://wa.me/5514998812492?text=${mensagemZap}`;
   }
 }
