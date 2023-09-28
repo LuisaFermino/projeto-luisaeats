@@ -250,10 +250,34 @@ a {
   font-family: "Roboto", "Righteous";
   color: white;
   font-size: 45px;
-  padding-left: 5vw;
+  padding-left: 8vw;
   padding-top: 2vh;
 }
+
+.descricao-valor-prato,
+.descricao-valor-bebida,
+.descricao-valor-sobremesa,
+.descricao-valor-total {
+  font-family: "Roboto", "Righteous";
+  color: white;
+  font-size: 45px;
+  padding-top: 2vh;
+  display: flex;
+}
+
+.teste-caixa {
+  display: flex;
+  width: 100%;
+  margin-top: 1vh;
+}
+
 .descricao-texto {
-  padding: 2%;
-  padding-top: 1vh;
+  width: 70%;
+}
+
+.teste-valor {
+  justify-content: right;
+  display: flex;
+  width: 30%;
+  margin-right: 8vw;
 }

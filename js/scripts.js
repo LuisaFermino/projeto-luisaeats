@@ -66,7 +66,10 @@ function fecharPedido() {
   valorPrato = valorPrato.replace(",", ".");
   valorPrato = Number(valorPrato);
   let valorPatualizado = valorPrato.toFixed(2);
-  mensagemPrato.innerHTML = `${nomePrato} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; R$ ${valorPatualizado}`;
+  mensagemPrato.innerHTML = `${nomePrato}`;
+
+  let mensagemValorPrato = document.querySelector(".descricao-valor-prato");
+  mensagemValorPrato.innerHTML = `R$ ${valorPatualizado}`;
 
   const nomeBebida = bebida.querySelector(".nome-prato").innerHTML;
   let valorBebida = bebida.querySelector(".valor-prato").innerHTML;
@@ -75,7 +78,10 @@ function fecharPedido() {
   valorBebida = valorBebida.replace(",", ".");
   valorBebida = Number(valorBebida);
   let valorBatualizado = valorBebida.toFixed(2);
-  mensagemBebida.innerHTML = `${nomeBebida} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; R$ ${valorBatualizado}`;
+  mensagemBebida.innerHTML = `${nomeBebida}`;
+
+  let mensagemValorBebida = document.querySelector(".descricao-valor-bebida");
+  mensagemValorBebida.innerHTML = `R$ ${valorBatualizado}`;
 
   const nomeSobremesa = sobremesa.querySelector(".nome-prato").innerHTML;
   let valorSobremesa = sobremesa.querySelector(".valor-prato").innerHTML;
@@ -84,16 +90,40 @@ function fecharPedido() {
   valorSobremesa = valorSobremesa.replace(",", ".");
   valorSobremesa = Number(valorSobremesa);
   let valorSatualizado = valorSobremesa.toFixed(2);
-  mensagemSobremesa.innerHTML = `${nomeSobremesa} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; R$ ${valorSatualizado}`;
+  mensagemSobremesa.innerHTML = `${nomeSobremesa}`;
+
+  let mensagemValorSobremesa = document.querySelector(
+    ".descricao-valor-sobremesa"
+  );
+  mensagemValorSobremesa.innerHTML = `R$ ${valorSatualizado}`;
 
   let valorTotal = valorPrato + valorBebida + valorSobremesa;
   let valorAtualizado = valorTotal.toFixed(2);
-  let mensagemTotal = document.querySelector(".descricao-total");
-  mensagemTotal.innerHTML = `TOTAL:&nbsp; R$ ${valorAtualizado}`;
+  let mensagemTotal = document.querySelector(".descricao-valor-total");
+  mensagemTotal.innerHTML = ` R$ ${valorAtualizado}`;
 
   fecharPedido.addEventListener("click", (e) => {
     if (e.target.id == "cancelar") {
       fecharPedido.classList.remove("abrir");
+    }
+    if (fecharPedido !== null) {
+      const liberado = document.querySelector(" .container-rodape");
+      liberado.classList.remove("liberado");
+
+      const pratoSelecionado = document.querySelector(
+        ".menu-prato .selecionado"
+      );
+      pratoSelecionado.classList.remove("selecionado");
+
+      const bebidaSelecionado = document.querySelector(
+        ".menu-bebida .selecionado"
+      );
+      bebidaSelecionado.classList.remove("selecionado");
+
+      const sobremesaSelecionado = document.querySelector(
+        ".menu-sobremesa .selecionado"
+      );
+      sobremesaSelecionado.classList.remove("selecionado");
     }
   });
 }
