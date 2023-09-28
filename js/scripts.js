@@ -129,12 +129,13 @@ function confirmarPedido() {
     const enderecoCliente = prompt("Informe seu Endereço: ");
 
     const mensagemZap = encodeURI(`Olá, gostaria de fazer o pedido:
-    \n- Prato: ${nomePrato}  R$ ${valorPatualizado}
-    \n- Bebida: ${nomeBebida}  R$ ${valorBatualizado}
-    \n- Sobremesa: ${nomeSobremesa}  R$ ${valorSatualizado}
+    - Prato: ${nomePrato}  R$ ${valorPatualizado}
+    - Bebida: ${nomeBebida}  R$ ${valorBatualizado}
+    - Sobremesa: ${nomeSobremesa}  R$ ${valorSatualizado}
     \nTotal: R$ ${valorAtualizado}
     \nNome: ${nomeCliente}
-    \nEndereço: ${enderecoCliente}`);
+    \nEndereço: ${enderecoCliente} 
+      Seu pedido chegará em 30min`);
 
     window.location.href = `https://wa.me/5514998812492?text=${mensagemZap}`;
   }
