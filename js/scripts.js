@@ -165,7 +165,7 @@ function confirmarPedido() {
     \n*Total: R$ ${valorAtualizado}*\n
     Nome: ${nomeCliente}
     Endereço: ${enderecoCliente}
-    \n*Seu pedido chegará em 30min*`);
+    \n*Seu pedido chegará em 6min*`);
     // console.log(mensagemZap);
 
     window.location.href = `https://wa.me/5514998812492?text=${mensagemZap}`;
