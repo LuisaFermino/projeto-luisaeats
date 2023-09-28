@@ -51,7 +51,7 @@ body {
   background-color: white;
   box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.179);
   margin-left: 5%;
-  border: 10px solid white;
+  border: 8px solid white;
   border-radius: 20px;
   margin-top: 2vh;
   width: 40vw;
@@ -149,7 +149,7 @@ body {
 }
 
 .selecionado {
-  border: 10px solid #32b72f;
+  border: 8px solid #32b72f;
   border-radius: 20px;
   margin-left: 5%;
   margin-top: 2vh;
@@ -213,7 +213,7 @@ a {
 
 .texto-confirmar {
   color: #50d074;
-  font-size: 40px;
+  font-size: 42px;
   font-weight: 700;
   font-family: "Roboto", "Righteous";
 }
@@ -249,10 +249,11 @@ a {
 .descricao-total {
   font-family: "Roboto", "Righteous";
   color: white;
-  font-size: 48px;
+  font-size: 45px;
   padding-left: 5vw;
   padding-top: 2vh;
 }
-.descricao {
-  padding: 1%;
+.descricao-texto {
+  padding: 2%;
+  padding-top: 1vh;
 }

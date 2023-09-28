@@ -54,7 +54,7 @@ function validarPedido() {
   }
 }
 
-//Função que mostra a aba de confirmação
+// Função que mostra a aba de confirmação
 function fecharPedido() {
   const fecharPedido = document.querySelector(".tela-confirmar");
   fecharPedido.classList.add("abrir");
@@ -66,7 +66,7 @@ function fecharPedido() {
   valorPrato = valorPrato.replace(",", ".");
   valorPrato = Number(valorPrato);
   let valorPatualizado = valorPrato.toFixed(2);
-  mensagemPrato.innerHTML = `${nomePrato} &nbsp;&nbsp;&nbsp;&nbsp; ${valorPatualizado}`;
+  mensagemPrato.innerHTML = `${nomePrato} &nbsp;&nbsp;&nbsp;&nbsp; R$ ${valorPatualizado}`;
 
   const nomeBebida = bebida.querySelector(".nome-prato").innerHTML;
   let valorBebida = bebida.querySelector(".valor-prato").innerHTML;
@@ -75,7 +75,7 @@ function fecharPedido() {
   valorBebida = valorBebida.replace(",", ".");
   valorBebida = Number(valorBebida);
   let valorBatualizado = valorBebida.toFixed(2);
-  mensagemBebida.innerHTML = `${nomeBebida} &nbsp;&nbsp;&nbsp;&nbsp; ${valorBatualizado}`;
+  mensagemBebida.innerHTML = `${nomeBebida} &nbsp;&nbsp;&nbsp;&nbsp; R$ ${valorBatualizado}`;
 
   const nomeSobremesa = sobremesa.querySelector(".nome-prato").innerHTML;
   let valorSobremesa = sobremesa.querySelector(".valor-prato").innerHTML;
@@ -84,12 +84,12 @@ function fecharPedido() {
   valorSobremesa = valorSobremesa.replace(",", ".");
   valorSobremesa = Number(valorSobremesa);
   let valorSatualizado = valorSobremesa.toFixed(2);
-  mensagemSobremesa.innerHTML = `${nomeSobremesa} &nbsp;&nbsp;&nbsp;&nbsp; ${valorSatualizado}`;
+  mensagemSobremesa.innerHTML = `${nomeSobremesa} &nbsp;&nbsp;&nbsp;&nbsp; R$ ${valorSatualizado}`;
 
   let valorTotal = valorPrato + valorBebida + valorSobremesa;
   let valorAtualizado = valorTotal.toFixed(2);
   let mensagemTotal = document.querySelector(".descricao-total");
-  mensagemTotal.innerHTML = `TOTAL: R$ ${valorAtualizado}`;
+  mensagemTotal.innerHTML = `TOTAL:&nbsp; R$ ${valorAtualizado}`;
 
   fecharPedido.addEventListener("click", (e) => {
     if (e.target.id == "cancelar") {
