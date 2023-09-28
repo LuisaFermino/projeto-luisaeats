@@ -66,7 +66,7 @@ function fecharPedido() {
   valorPrato = valorPrato.replace(",", ".");
   valorPrato = Number(valorPrato);
   let valorPatualizado = valorPrato.toFixed(2);
-  mensagemPrato.innerHTML = `${nomePrato} &nbsp;&nbsp;&nbsp;&nbsp; R$ ${valorPatualizado}`;
+  mensagemPrato.innerHTML = `${nomePrato} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; R$ ${valorPatualizado}`;
 
   const nomeBebida = bebida.querySelector(".nome-prato").innerHTML;
   let valorBebida = bebida.querySelector(".valor-prato").innerHTML;
@@ -75,7 +75,7 @@ function fecharPedido() {
   valorBebida = valorBebida.replace(",", ".");
   valorBebida = Number(valorBebida);
   let valorBatualizado = valorBebida.toFixed(2);
-  mensagemBebida.innerHTML = `${nomeBebida} &nbsp;&nbsp;&nbsp;&nbsp; R$ ${valorBatualizado}`;
+  mensagemBebida.innerHTML = `${nomeBebida} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; R$ ${valorBatualizado}`;
 
   const nomeSobremesa = sobremesa.querySelector(".nome-prato").innerHTML;
   let valorSobremesa = sobremesa.querySelector(".valor-prato").innerHTML;
@@ -84,7 +84,7 @@ function fecharPedido() {
   valorSobremesa = valorSobremesa.replace(",", ".");
   valorSobremesa = Number(valorSobremesa);
   let valorSatualizado = valorSobremesa.toFixed(2);
-  mensagemSobremesa.innerHTML = `${nomeSobremesa} &nbsp;&nbsp;&nbsp;&nbsp; R$ ${valorSatualizado}`;
+  mensagemSobremesa.innerHTML = `${nomeSobremesa} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; R$ ${valorSatualizado}`;
 
   let valorTotal = valorPrato + valorBebida + valorSobremesa;
   let valorAtualizado = valorTotal.toFixed(2);
@@ -129,13 +129,14 @@ function confirmarPedido() {
     const enderecoCliente = prompt("Informe seu Endereço: ");
 
     const mensagemZap = encodeURI(`Olá, gostaria de fazer o pedido:\n
-  - Prato: ${nomePrato}        R$ ${valorPatualizado}
-  - Bebida: ${nomeBebida}      R$ ${valorBatualizado}
-  - Sobremesa: ${nomeSobremesa}          R$ ${valorSatualizado}
+  - Prato: ${nomePrato}      R$ ${valorPatualizado}
+  - Bebida: ${nomeBebida}    R$ ${valorBatualizado}
+  - Sobremesa: ${nomeSobremesa}        R$ ${valorSatualizado}
     \n*Total: R$ ${valorAtualizado}*\n
     Nome: ${nomeCliente}
     Endereço: ${enderecoCliente}
     \n*Seu pedido chegará em 30min*`);
+    // console.log(mensagemZap);
 
     window.location.href = `https://wa.me/5514998812492?text=${mensagemZap}`;
   }
